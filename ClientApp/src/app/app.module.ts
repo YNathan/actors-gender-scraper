@@ -6,11 +6,17 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import {CelebritiesViewComponent} from "./celebrities-view/celebrities-view.component";
+import {TranformArrayPipe} from "./tranform-array.pipe";
+import {GenderFromRolesPipe} from "./gender-from-roles.pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    CelebritiesViewComponent,
+    TranformArrayPipe,
+    GenderFromRolesPipe,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -18,7 +24,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     FormsModule,
     RouterModule.forRoot([    ])
   ],
-  providers: [],
+  providers: [TranformArrayPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

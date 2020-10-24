@@ -3,5 +3,13 @@
     <div class="container">
       <a class="navbar-brand" [routerLink]="['/']">Celebrities System</a>
     </div>
+    <div class="" *ngIf="!celebService.loading">
+      <button class="btn" (click)="refrechCelebrities()">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </div>
+    <div class="spinner-border" role="status" *ngIf="celebService.loading">
+      <span class="sr-only">Loading...</span>
+    </div>
   </nav>
 </header>
