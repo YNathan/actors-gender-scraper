@@ -1,0 +1,42 @@
+<div class="flex-container">
+
+
+  <div class="container">
+    <div class="card" *ngFor="let celeb of celebService.celebrities$ | async">
+      <div class="card-body">
+        <div class="row">
+
+          <div class="col avatar-section">
+            <img src={{celeb.imageUrl}}>
+          </div>
+
+          <div class="col">
+            <div class="row">
+              <div class="col text-left"> <label class="title-body"> {{celeb.name}}</label></div>
+              <div class="col text-right title-body"> Born in: {{celeb.dateOfBirth | date:"mediumDate"}}</div>
+
+            </div>
+            <div class="row align-bottom align-text-bottom align-baseline celeb-bottom-row">
+              <label class="celeb-rols-section">
+                {{celeb.roles | tranformArray}}
+              </label>
+            </div>
+          </div>
+
+          <div class="col">
+
+            <div class="row float-right">
+              <button class="btn" (click)="removeCeleb(celeb.name)"><i class="fa fa-trash"></i></button>
+            </div>
+            <div class="row float-right celeb-bottom-row">
+              {{celeb.roles | genderFromRoles}}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+

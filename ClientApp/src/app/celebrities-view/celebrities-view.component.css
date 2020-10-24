@@ -1,0 +1,104 @@
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.flex-item {
+  border-radius: 14%;
+  padding: 1vh;
+  margin: 3vh;
+  width: 24vh;
+  max-height: 24vh;
+  text-align: center;
+  position: relative;
+}
+
+.flex-item img{
+  border-radius: 20%;
+  object-fit: contain;
+}
+
+.img-text-container-section {
+  position: absolute;
+  bottom: 5px;
+
+  background: linear-gradient(to bottom, red, rgba(255, 0, 0, 0));
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+.role-container-section{
+  position: absolute;
+  background: linear-gradient(to bottom, #1e5fe3, rgba(255, 0, 0, 0));
+  color: white;
+  margin: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+.role-list{
+
+}
+
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+}
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+.avatar-section{
+  max-width: 120px;
+}
+.avatar-section img{
+  max-width: 120px;
+  border-radius: 50%;
+}
+
+.title-body{
+  font-family: Merienda;
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+
+}
+.celeb-bottom-row{
+  bottom: 1px;
+  position: absolute;
+}
+.celeb-rols-section{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: Georgia,Serif;
+  font-style: italic;
+  color: #666;
+}
+
+.celeb-gender-section{
+  float:right;
+}
