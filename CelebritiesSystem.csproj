@@ -11,6 +11,9 @@
     <!-- Set this to true if you enable server-side prerendering -->
     <BuildServerSideRenderer>false</BuildServerSideRenderer>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="app.yaml" CopyToOutputDirectory="Always" />
+</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AngleSharp" Version="0.14.0" />
